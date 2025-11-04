@@ -1,10 +1,7 @@
 // Mobile menu toggle
-const mobileMenu = document.querySelector('.mobile-menu');
-const navLinks = document.querySelector('.nav-links');
-
-mobileMenu.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
+    document.querySelector('.mobile-menu').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
 
 // Simple testimonial slider
 const slides = document.querySelectorAll('.testimonial-slide');
@@ -74,3 +71,6 @@ setInterval(() => {
     }, { threshold: 0.5 });
 
     observer.observe(statsSection);
+
+
+    
