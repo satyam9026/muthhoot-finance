@@ -410,3 +410,24 @@ footer {
     font-size: 2rem;
   }
 }
+
+.nav-call {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #003366;
+  margin-right: 20px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.nav-call i {
+  font-size: 18px;
+  color: #d60000;
+}
+
+.nav-call:hover {
+  color: #d60000;
+}
