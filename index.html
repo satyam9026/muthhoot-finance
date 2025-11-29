@@ -66,7 +66,10 @@
     }
 
     .btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       padding: 12px 28px;
       border-radius: 6px;
       background: var(--secondary);
@@ -93,6 +96,16 @@
     .btn-secondary:hover {
       background: var(--secondary);
       color: var(--primary);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      background: #128C7E;
+      transform: translateY(-3px);
     }
 
     /* Header */
@@ -651,6 +664,43 @@
       color: var(--secondary);
     }
 
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      z-index: 1000;
+      transition: var(--transition);
+      animation: pulse 2s infinite;
+    }
+
+    .whatsapp-float:hover {
+      background: #128C7E;
+      transform: scale(1.1);
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
     /* Footer */
     footer {
       background: linear-gradient(to right, #001a33, #003366);
@@ -907,6 +957,14 @@
         justify-content: center;
         margin-top: 15px;
       }
+
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+      }
     }
 
     @media (max-width: 576px) {
@@ -980,7 +1038,9 @@
       <p>Your partner in achieving financial freedom with reliable gold loans and banking services. With over 130 years of legacy, we've helped millions achieve their dreams.</p>
       <div class="hero-btns">
         <a href="#services" class="btn">Our Services</a>
-        <a href="#contact" class="btn btn-secondary">Contact Us</a>
+        <a href="https://wa.me/9031209738?text=Hello%20Muthoot%20Finance,%20I%20would%20like%20to%20know%20more%20about%20your%20services" class="btn btn-whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i> Contact on WhatsApp
+        </a>
       </div>
     </div>
   </section>
@@ -1195,6 +1255,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/9031209738?text=Hello%20Muthoot%20Finance,%20I%20would%20like%20to%20know%20more%20about%20your%20services" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <!-- Login Modal -->
   <div class="modal" id="loginModal">
